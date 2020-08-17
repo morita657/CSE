@@ -91,11 +91,6 @@ object SpatialQuery extends App{
 
     val resultDf = spark.sql("select * from point1 p1, point2 p2 where ST_Within(p1._c0, p2._c0, "+arg3+")")
 
-
-
-
-    //resultDf.show(false)
-
     return resultDf.count()
   }
 }
